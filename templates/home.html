@@ -2,12 +2,48 @@
 <html>
     <head>
         <title> Jovian Careers</title>
+        <style>
+            p{
+                font-family: Papyrus,Copperplate, fantasy;
+                text-align: justify;
+            }
+            h1{
+                /* font-family: "Times New Roman", Times, serif; */
+                font-family: Papyrus,Copperplate, fantasy;
+                color: blueviolet;
+                font-weight: bolder;
+            }
+            h2,h3{
+                /* font-family: "Arial Black", Gadget, sans-serif; */
+                font-family: Papyrus,Copperplate, fantasy;
+                color: brown;
+                font-weight: bold;
+
+            }
+            #banner{
+                width:1000px;
+                height:360px;
+                object-fit: cover;
+            }
+            #body{
+                /* width: 100%; */
+                width: 1000px;
+                margin:0 auto
+            }
+
+
+        </style>
     </head>
     <body>
-        <!-- <p> Hello there, You'll learn about the job opening at Jovian here.</p> -->
+        <div id="body">
+        
+        <p> Hello there, You'll learn about the job opening at Jovian here.</p> 
         <h1> Jovian Careers</h1>
-        <img src=" http://127.0.0.1:8000/static/home_image.jpg" height="300" alt="Jovian Careers">
+        <div class ="image">
+        <img id ="banner" src="{{url_for ('static',filename='home_image.jpg')}}" height="300" alt="Jovian Careers">
+        </div>
         <h2> About Jovian</h2>
+        <h3> Test Heading</h3>
        <p> Lorem ipsum dolor sit amet. Non quasi aliquid ut dolore cumque ea 
        ipsam repudiandae ut molestias voluptas ut dolor facere quo placeat facere. 
        Eum laboriosam perspiciatis quo itaque quasi in suscipit vero aut voluptas 
@@ -20,5 +56,6 @@
          <h2>Open positions</h2>
          <h3> TODO</h3>
          <button> Contact Us</button>
+        </div>
     </body>
 </html>
