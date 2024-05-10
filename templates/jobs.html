@@ -1,16 +1,31 @@
 <style>
-#a{
-  border-bottom: double;
-}
-    
+    .font{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+    }
+    #a{
+  border-bottom: 0.1px double;
+
+    }
+    #space{
+        padding-top: 20px;
+    }
 </style>
-<div> 
-    <!-- <h4> {{jb[id]}}</h4> -->
-    <!-- <h4> ID</h4>     -->
-    <h4>{{jb["title"]}}</h4>
-    <h6>{{jb["Salary"]}}</h6>
-    <div id="a">
-     <h6>{{jb["Location"]}}</h6> 
-    </div>
-    
-</div>
+<div class="container">
+    <div class="row" id="space" >
+            <div class="col-10" id="a">
+                <div class="font">
+                    <h4>{{jb["title"]}}</h4>
+                    <h6>{{jb["Salary"]}}</h6>
+                    <div>
+                    <h6>{{jb["Location"]}}</h6> 
+                    </div>
+                </div>
+             </div>
+            <div class ="col-2" style="text-align: center;"  >
+             <button type="button" class="btn btn-outline-primary">Apply</button>
+            </div>
+            <!-- <div id="a"> </div> -->
+            </div>
+        </div> 
+        
