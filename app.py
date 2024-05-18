@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,jsonify
 app=Flask(__name__)
 jobs=[
     { "id":"01", "title":"Software Engineer", "Salary":"Rs.5,00,000 LPA", "Location":"Bangalore"},
@@ -11,6 +11,9 @@ jobs=[
 def hello():
     return render_template("home.html",job=jobs)
     # return "<p> Hello World!!</p>"
+@app.route("/api/jobs")
+def list_jobs():
+    return jsonify(jobs)
 if __name__=="__main__":
     app.run(debug=True,port=8000)
 
